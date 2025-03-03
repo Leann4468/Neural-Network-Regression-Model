@@ -6,18 +6,8 @@ To develop a neural network regression model for the given dataset.
 
 ## THEORY
 
-1. Preprocess the dataset using feature scaling.
-   
-2. Train a neural network to predict outputs based on given inputs.
-   
-3. Minimize error using the RMSprop optimizer and the MSE loss function.
-   
-4. Evaluate model performance on test data.
-   
-5. Visualize the training loss over epochs.
-   
-6. Make predictions using the trained model.
-
+It consists of an input layer with 1 neuron, two hidden layers with 4 neurons each, and an output layer with 1 neuron. Each neuron in one layer is connected to all neurons in the next layer, allowing the model to learn complex patterns. The hidden layers use activation functions such as ReLU to introduce non-linearity, enabling the network to capture intricate relationships within the data. 
+During training, the model adjusts its weights and biases using optimization techniques like RMSprop or Adam, minimizing a loss function such as Mean Squared Error for regression.The forward propagation process involves computing weighted sums, applying activation functions, and passing the transformed data through layer.
 
 ## Neural Network Model
 
@@ -71,6 +61,12 @@ class NeuralNet(nn.Module):
     x = self.relu(self.fc2(x))
     x = self. fc3(x)
     return x
+```
+
+```python
+ai_brain = NeuralNet ()
+criterion = nn. MSELoss ()
+optimizer = optim.RMSprop (ai_brain. parameters(), lr=0.001)
 ```
 
 ```python
